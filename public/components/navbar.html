@@ -1,0 +1,55 @@
+<nav class="navbar glass-navbar">
+    <div class="navbar-container">
+        <!-- Logo -->
+        <a href="/" class="navbar-brand">
+            <i class="fas fa-motorcycle"></i>
+            <span>FathurProject</span>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="navbar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Cari spare part motor..." id="navbarSearch">
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="navbar-links">
+            <a href="/" class="navbar-link active">Beranda</a>
+            <a href="/pages/products.html" class="navbar-link">Produk</a>
+            <a href="/pages/products.html?category=Racing" class="navbar-link">Racing</a>
+        </div>
+
+        <!-- Actions -->
+        <div class="navbar-actions">
+            <button class="navbar-icon" onclick="App.goToWishlist()" title="Wishlist">
+                <i class="fas fa-heart"></i>
+            </button>
+            <button class="navbar-icon cart-btn" onclick="App.goToCart()" title="Keranjang">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge" id="navbarCartBadge">0</span>
+            </button>
+            <div class="navbar-auth" id="navbarAuth">
+                <a href="/pages/login.html" class="btn-login">Login</a>
+                <a href="/pages/register.html" class="btn-register">Daftar</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="navbar-toggle" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="navbar-mobile" id="mobileMenu">
+        <a href="/" class="navbar-link">Beranda</a>
+        <a href="/pages/products.html" class="navbar-link">Produk</a>
+        <a href="/pages/products.html?category=Racing" class="navbar-link">Racing</a>
+        <a href="/pages/wishlist.html" class="navbar-link"><i class="fas fa-heart"></i> Wishlist</a>
+        <a href="/pages/cart.html" class="navbar-link"><i class="fas fa-shopping-cart"></i> Keranjang</a>
+        <div id="mobileAuth">
+            <a href="/pages/login.html" class="btn-login">Login</a>
+            <a href="/pages/register.html" class="btn-register">Daftar</a>
+        </div>
+    </div>
+</nav>

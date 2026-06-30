@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - FathurProject</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" href="/css/toast.css">
+</head>
+<body>
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo"><i class="fas fa-motorcycle"></i><span>FathurProject</span></div>
+            <div class="loading-spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="sidebar-logo">
+                <i class="fas fa-motorcycle"></i>
+                <span>FathurProject</span>
+                <span class="admin-badge">Admin</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-page="dashboard">
+                    <i class="fas fa-chart-pie"></i> Dashboard
+                </a>
+                <a href="#" class="nav-item" data-page="products">
+                    <i class="fas fa-boxes"></i> Produk
+                </a>
+                <a href="#" class="nav-item" data-page="orders">
+                    <i class="fas fa-shopping-bag"></i> Pesanan
+                </a>
+                <a href="#" class="nav-item" data-page="customers">
+                    <i class="fas fa-users"></i> Pelanggan
+                </a>
+                <a href="#" class="nav-item" data-page="categories">
+                    <i class="fas fa-tags"></i> Kategori
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="/" class="nav-item">
+                    <i class="fas fa-arrow-left"></i> Kembali ke Toko
+                </a>
+                <button onclick="handleAdminLogout()" class="nav-item logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Top Bar -->
+            <header class="admin-topbar">
+                <button class="sidebar-toggle" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="topbar-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Cari di admin..." id="adminSearch">
+                </div>
+                <div class="topbar-user">
+                    <span id="adminName">Admin</span>
+                    <div class="admin-avatar" id="adminAvatar">A</div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="admin-content">
+                <!-- Dashboard Page -->
+                <div class="admin-page active" id="page-dashboard">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-boxes"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="totalProducts">0</span>
+                                <span class="stat-label">Total Produk</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-shopping-bag"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="totalOrders">0</span>
+                                <span class="stat-label">Total Pesanan</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-users"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="totalUsers">0</span>
+                                <span class="stat-label">Total Pelanggan</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-money-bill-wave"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value" id="totalRevenue">Rp 0</span>
+                                <span class="stat-label">Total Pendapatan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-charts">
+                        <div class="chart-card">
+                            <h4>Pesanan Terbaru</h4>
+                            <div id="recentOrders" class="recent-orders">
+                                <!-- Rendered by JS -->
+                            </div>
+                        </div>
+                        <div class="chart-card">
+                            <h4>Statistik Kategori</h4>
+                            <div id="categoryStats" class="category-stats">
+                                <!-- Rendered by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Page -->
+                <div class="admin-page" id="page-products">
+                    <div class="page-toolbar">
+                        <h2>Manajemen Produk</h2>
+                        <button class="btn-primary" onclick="openProductModal()">
+                            <i class="fas fa-plus"></i> Tambah Produk
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="admin-table" id="productsTable">
+                            <thead>
+                                <tr>
+                                    <th>Gambar</th>
+                                    <th>Nama</th>
+                                    <th>Kategori</th>
+                                    <th>Harga</th>
+                                    <th>Stok</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productsTableBody">
+                                <!-- Rendered by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Orders Page -->
+                <div class="admin-page" id="page-orders">
+                    <div class="page-toolbar">
+                        <h2>Manajemen Pesanan</h2>
+                    </div>
+                    <div class="table-container">
+                        <table class="admin-table" id="ordersTable">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Pelanggan</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Tanggal</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ordersTableBody">
+                                <!-- Rendered by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Customers Page -->
+                <div class="admin-page" id="page-customers">
+                    <div class="page-toolbar">
+                        <h2>Manajemen Pelanggan</h2>
+                    </div>
+                    <div class="table-container">
+                        <table class="admin-table" id="customersTable">
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Tanggal Daftar</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="customersTableBody">
+                                <!-- Rendered by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Categories Page -->
+                <div class="admin-page" id="page-categories">
+                    <div class="page-toolbar">
+                        <h2>Manajemen Kategori</h2>
+                        <button class="btn-primary" onclick="openCategoryModal()">
+                            <i class="fas fa-plus"></i> Tambah Kategori
+                        </button>
+                    </div>
+                    <div class="categories-grid" id="categoriesGridAdmin">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="admin-modal" id="productModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="productModalTitle">Tambah Produk</h3>
+                <button class="modal-close" onclick="closeProductModal()">&times;</button>
+            </div>
+            <form id="productForm" onsubmit="saveProduct(event)">
+                <input type="hidden" id="editProductId">
+                <div class="form-group">
+                    <label>Nama Produk</label>
+                    <input type="text" id="prodName" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Harga</label>
+                        <input type="number" id="prodPrice" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Diskon (%)</label>
+                        <input type="number" id="prodDiscount" value="0" min="0" max="100">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Stok</label>
+                        <input type="number" id="prodStock" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Rating</label>
+                        <input type="number" id="prodRating" step="0.1" value="4.0" min="0" max="5">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <select id="prodCategory" required></select>
+                </div>
+                <div class="form-group">
+                    <label>Brand</label>
+                    <input type="text" id="prodBrand">
+                </div>
+                <div class="form-group">
+                    <label>Deskripsi</label>
+                    <textarea id="prodDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>URL Gambar</label>
+                    <input type="text" id="prodImage" placeholder="nama-file.jpg">
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+                    <i class="fas fa-save"></i> Simpan Produk
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Category Modal -->
+    <div class="admin-modal" id="categoryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="categoryModalTitle">Tambah Kategori</h3>
+                <button class="modal-close" onclick="closeCategoryModal()">&times;</button>
+            </div>
+            <form id="categoryForm" onsubmit="saveCategory(event)">
+                <input type="hidden" id="editCategoryId">
+                <div class="form-group">
+                    <label>Nama Kategori</label>
+                    <input type="text" id="catName" required>
+                </div>
+                <div class="form-group">
+                    <label>Icon (Font Awesome)</label>
+                    <input type="text" id="catIcon" placeholder="fa-microchip">
+                </div>
+                <div class="form-group">
+                    <label>Deskripsi</label>
+                    <textarea id="catDescription" rows="2"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+                    <i class="fas fa-save"></i> Simpan Kategori
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toastContainer"></div>
+
+    <script src="/js/toast.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+</html>
