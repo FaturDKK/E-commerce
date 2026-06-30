@@ -225,26 +225,6 @@ npm start
 
 > **Catatan**: Password sudah di-hash dengan bcrypt. Registrasi otomatis akan membuat akun dengan role `user`.
 
----
-
-## 📸 Screenshots
-
-### Landing Page
-![Landing Page](screenshots/landing.png)
-
-### Product Page
-![Product Page](screenshots/products.png)
-
-### Product Detail
-![Product Detail](screenshots/product-detail.png)
-
-### Cart
-![Cart](screenshots/cart.png)
-
-### Admin Dashboard
-![Admin Dashboard](screenshots/admin.png)
-
----
 
 ## 🗄️ Migrasi ke MongoDB
 
@@ -268,3 +248,66 @@ const ProductSchema = new mongoose.Schema({
 });
 
 const Product = mongoose.model('Product', ProductSchema);
+```
+## 👨‍💻 Developer
+
+**FathurProject** - Dibangun dengan ❤️ untuk para pecinta motor
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE) untuk detail.
+
+
+
+---
+
+## 🙏 Credits
+
+Terima kasih kepada:
+
+| Sumber | Digunakan untuk |
+|--------|-----------------|
+| [Font Awesome](https://fontawesome.com) | Ikon-ikon keren |
+| [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins) | Font utama |
+| [Apple](https://apple.com) | Inspirasi desain minimalis |
+| [Tesla](https://tesla.com) | Inspirasi desain premium |
+| [Nike](https://nike.com) | Inspirasi branding |
+| [Shopee](https://shopee.co.id) | Inspirasi e-commerce |
+| [Tokopedia](https://tokopedia.com) | Inspirasi marketplace |
+| [Stripe](https://stripe.com) | Inspirasi dashboard |
+| [Vercel](https://vercel.com) | Inspirasi UI modern |
+| [Node.js](https://nodejs.org) | Runtime backend |
+| [Express.js](https://expressjs.com) | Framework backend |
+| [bcryptjs](https://github.com/dcodeIO/bcrypt.js) | Hashing password |
+| [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) | JWT autentikasi |
+| [multer](https://github.com/expressjs/multer) | Upload file |
+| [uuid](https://github.com/uuidjs/uuid) | Generate ID unik |
+| [cors](https://github.com/expressjs/cors) | CORS middleware |
+
+---
+---
+
+## 🤝 Kontribusi
+
+Ingin berkontribusi? Silakan:
+
+1. **Fork** repository ini
+2. **Clone** fork kamu
+3. **Buat branch** baru: `git checkout -b fitur-baru`
+4. **Commit** perubahan: `git commit -m 'Tambahkan fitur baru'`
+5. **Push** ke branch: `git push origin fitur-baru`
+6. Buat **Pull Request**
+
+---
+
+## ⭐ Dukung Proyek Ini
+
+Jika kamu suka dengan proyek ini, beri ⭐ di GitHub dan bagikan ke teman-temanmu!
+
+---
+
+**🏍️ FathurProject - Spare part motor berkualitas untuk generasi modern.**
+
+**Terima kasih telah menggunakan FathurProject!** 🙏
