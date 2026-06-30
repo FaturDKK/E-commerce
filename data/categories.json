@@ -1,0 +1,92 @@
+[
+  {
+    "id": "cat1",
+    "name": "Electronic",
+    "icon": "fa-microchip",
+    "description": "Komponen elektronik dan kelistrikan motor"
+  },
+  {
+    "id": "cat2",
+    "name": "Engine",
+    "icon": "fa-cogs",
+    "description": "Komponen mesin dan perlengkapannya"
+  },
+  {
+    "id": "cat3",
+    "name": "Mechanism",
+    "icon": "fa-gears",
+    "description": "Komponen mekanik dan penggerak"
+  },
+  {
+    "id": "cat4",
+    "name": "Transmission",
+    "icon": "fa-exchange-alt",
+    "description": "Komponen transmisi dan kopling"
+  },
+  {
+    "id": "cat5",
+    "name": "Lighting",
+    "icon": "fa-lightbulb",
+    "description": "Sistem penerangan dan lampu"
+  },
+  {
+    "id": "cat6",
+    "name": "Brake",
+    "icon": "fa-stop",
+    "description": "Sistem pengereman dan komponennya"
+  },
+  {
+    "id": "cat7",
+    "name": "Suspension",
+    "icon": "fa-car",
+    "description": "Sistem suspensi dan peredam kejut"
+  },
+  {
+    "id": "cat8",
+    "name": "Wheel",
+    "icon": "fa-circle",
+    "description": "Velg dan komponen roda"
+  },
+  {
+    "id": "cat9",
+    "name": "Tire",
+    "icon": "fa-circle",
+    "description": "Ban dan perlengkapannya"
+  },
+  {
+    "id": "cat10",
+    "name": "Oil",
+    "icon": "fa-tint",
+    "description": "Oli dan pelumas motor"
+  },
+  {
+    "id": "cat11",
+    "name": "Chain",
+    "icon": "fa-link",
+    "description": "Rantai dan gear motor"
+  },
+  {
+    "id": "cat12",
+    "name": "Body Parts",
+    "icon": "fa-paint-brush",
+    "description": "Komponen bodi dan fairing"
+  },
+  {
+    "id": "cat13",
+    "name": "Accessories",
+    "icon": "fa-gem",
+    "description": "Aksesoris dan perlengkapan tambahan"
+  },
+  {
+    "id": "cat14",
+    "name": "Racing",
+    "icon": "fa-flag-checkered",
+    "description": "Komponen balap dan performa tinggi"
+  },
+  {
+    "id": "cat15",
+    "name": "Tools",
+    "icon": "fa-tools",
+    "description": "Perkakas dan alat bengkel"
+  }
+]

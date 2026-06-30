@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang - FathurProject</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" href="/css/toast.css">
+</head>
+<body>
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo"><i class="fas fa-motorcycle"></i><span>FathurProject</span></div>
+            <div class="loading-spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div id="navbarContainer"></div>
+
+    <main class="cart-page">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-shopping-cart"></i> Keranjang <span class="gradient-text">Belanja</span></h1>
+                <p id="cartCount">0 produk di keranjang</p>
+            </div>
+
+            <div class="cart-content">
+                <!-- Cart Items -->
+                <div class="cart-items" id="cartItems">
+                    <!-- Rendered by JS -->
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary" id="cartSummary">
+                    <div class="summary-card">
+                        <h3>Ringkasan Belanja</h3>
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">Rp 0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Ongkos Kirim</span>
+                            <span id="shippingCost">Rp 0</span>
+                        </div>
+                        <div class="summary-row discount-row">
+                            <span>Diskon</span>
+                            <span id="discountTotal">Rp 0</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <span id="grandTotal">Rp 0</span>
+                        </div>
+                        <button class="btn-primary btn-checkout" onclick="goToCheckout()">
+                            <i class="fas fa-credit-card"></i> Lanjut ke Pembayaran
+                        </button>
+                        <button class="btn-secondary btn-continue" onclick="continueShopping()">
+                            <i class="fas fa-arrow-left"></i> Lanjut Belanja
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Cart -->
+            <div class="empty-cart" id="emptyCart" style="display:none;">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Keranjang Kosong</h3>
+                <p>Yuk, cari spare part motor favoritmu sekarang!</p>
+                <a href="/pages/products.html" class="btn-primary">Mulai Belanja</a>
+            </div>
+        </div>
+    </main>
+
+    <div id="footerContainer"></div>
+    <div id="toastContainer"></div>
+
+    <script src="/js/components.js"></script>
+    <script src="/js/toast.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

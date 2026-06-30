@@ -1,0 +1,364 @@
+[
+  {
+    "id": "p1",
+    "name": "Battery Li-Ion 12V 6Ah MotoX",
+    "price": 450000,
+    "discount": 10,
+    "stock": 45,
+    "rating": 4.8,
+    "reviews": 120,
+    "description": "Battery lithium-ion dengan teknologi terbaru, ringan dan tahan lama. Cocok untuk motor matic dan sport.",
+    "specifications": {
+      "voltage": "12V",
+      "capacity": "6Ah",
+      "type": "Lithium-Ion",
+      "weight": "1.2kg"
+    },
+    "category": "Electronic",
+    "brand": "MotoX",
+    "image": "battery.jpg"
+  },
+  {
+    "id": "p2",
+    "name": "CDI Racing High Performance",
+    "price": 350000,
+    "discount": 15,
+    "stock": 30,
+    "rating": 4.9,
+    "reviews": 85,
+    "description": "CDI racing dengan timing advance untuk performa maksimal. Meningkatkan akselerasi dan top speed.",
+    "specifications": {
+      "type": "Digital",
+      "voltage": "12V",
+      "feature": "Programmable"
+    },
+    "category": "Electronic",
+    "brand": "RacingPro",
+    "image": "cdi.jpg"
+  },
+  {
+    "id": "p3",
+    "name": "Spark Plug Iridium NGK",
+    "price": 85000,
+    "discount": 0,
+    "stock": 120,
+    "rating": 4.7,
+    "reviews": 200,
+    "description": "Busi iridium NGK dengan elektroda tipis untuk pembakaran lebih efisien. Tahan lama dan performa optimal.",
+    "specifications": {
+      "type": "Iridium",
+      "thread": "10mm",
+      "heatRange": "7"
+    },
+    "category": "Engine",
+    "brand": "NGK",
+    "image": "sparkplug.jpg"
+  },
+  {
+    "id": "p4",
+    "name": "Piston Kit 58mm FIM",
+    "price": 780000,
+    "discount": 5,
+    "stock": 15,
+    "rating": 4.6,
+    "reviews": 45,
+    "description": "Piston kit ukuran 58mm dengan ring piston berkualitas tinggi. Meningkatkan kompresi dan tenaga motor.",
+    "specifications": {
+      "size": "58mm",
+      "material": "Aluminum Alloy",
+      "compression": "11:1"
+    },
+    "category": "Engine",
+    "brand": "FIM",
+    "image": "piston.jpg"
+  },
+  {
+    "id": "p5",
+    "name": "Chain & Sprocket Kit 520",
+    "price": 520000,
+    "discount": 8,
+    "stock": 40,
+    "rating": 4.8,
+    "reviews": 95,
+    "description": "Kit rantai dan sproket ukuran 520 dengan material premium. Tahan aus dan transfer tenaga optimal.",
+    "specifications": {
+      "size": "520",
+      "links": "120L",
+      "material": "Steel Hardened"
+    },
+    "category": "Chain",
+    "brand": "DID",
+    "image": "chain.jpg"
+  },
+  {
+    "id": "p6",
+    "name": "Brake Disc Floating 320mm",
+    "price": 650000,
+    "discount": 12,
+    "stock": 25,
+    "rating": 4.9,
+    "reviews": 75,
+    "description": "Brake disc floating diameter 320mm dengan desain ventilasi optimal. Pengereman lebih kuat dan stabil.",
+    "specifications": {
+      "size": "320mm",
+      "type": "Floating",
+      "material": "Stainless Steel"
+    },
+    "category": "Brake",
+    "brand": "Galfer",
+    "image": "brakedisc.jpg"
+  },
+  {
+    "id": "p7",
+    "name": "Shock Absorber YSS G-Series",
+    "price": 950000,
+    "discount": 0,
+    "stock": 20,
+    "rating": 4.7,
+    "reviews": 60,
+    "description": "Shock absorber YSS G-Series dengan adjustable preload dan rebound. Nyaman untuk daily dan touring.",
+    "specifications": {
+      "type": "Mono Shock",
+      "adjustable": "Preload & Rebound",
+      "travel": "60mm"
+    },
+    "category": "Suspension",
+    "brand": "YSS",
+    "image": "shock.jpg"
+  },
+  {
+    "id": "p8",
+    "name": "LED Headlight Projector 6000K",
+    "price": 420000,
+    "discount": 18,
+    "stock": 35,
+    "rating": 4.5,
+    "reviews": 150,
+    "description": "LED headlight projector dengan suhu warna 6000K. Terang, hemat energi, dan tahan lama.",
+    "specifications": {
+      "power": "30W",
+      "colorTemp": "6000K",
+      "lumen": "2800lm"
+    },
+    "category": "Lighting",
+    "brand": "Osram",
+    "image": "headlight.jpg"
+  },
+  {
+    "id": "p9",
+    "name": "Racing Air Filter K&N",
+    "price": 380000,
+    "discount": 5,
+    "stock": 28,
+    "rating": 4.6,
+    "reviews": 88,
+    "description": "Air filter racing K&N washable dengan flow tinggi. Meningkatkan performa dan efisiensi bahan bakar.",
+    "specifications": {
+      "type": "Cotton Gauze",
+      "reusable": "Yes",
+      "flow": "+35%"
+    },
+    "category": "Engine",
+    "brand": "K&N",
+    "image": "airfilter.jpg"
+  },
+  {
+    "id": "p10",
+    "name": "Grip Handlebar Comfort Pro",
+    "price": 150000,
+    "discount": 0,
+    "stock": 50,
+    "rating": 4.4,
+    "reviews": 110,
+    "description": "Grip handlebar dengan material karet premium dan desain ergonomis. Nyaman untuk perjalanan jauh.",
+    "specifications": {
+      "material": "Rubber Composite",
+      "length": "120mm",
+      "color": "Black/Red"
+    },
+    "category": "Accessories",
+    "brand": "ProGrip",
+    "image": "grip.jpg"
+  },
+  {
+    "id": "p11",
+    "name": "Engine Oil Motul 10W-40 1L",
+    "price": 135000,
+    "discount": 5,
+    "stock": 100,
+    "rating": 4.9,
+    "reviews": 300,
+    "description": "Engine oil Motul 10W-40 dengan teknologi ester. Perlindungan mesin maksimal untuk semua kondisi.",
+    "specifications": {
+      "viscosity": "10W-40",
+      "volume": "1L",
+      "type": "Synthetic"
+    },
+    "category": "Oil",
+    "brand": "Motul",
+    "image": "engineoil.jpg"
+  },
+  {
+    "id": "p12",
+    "name": "Tire Sport Michelin Pilot Street",
+    "price": 850000,
+    "discount": 10,
+    "stock": 18,
+    "rating": 4.7,
+    "reviews": 65,
+    "description": "Ban sport Michelin Pilot Street untuk handling optimal di jalan kering dan basah.",
+    "specifications": {
+      "size": "110/70-17",
+      "type": "Radial",
+      "speedRating": "H"
+    },
+    "category": "Tire",
+    "brand": "Michelin",
+    "image": "tire.jpg"
+  },
+  {
+    "id": "p13",
+    "name": "Clutch Plate Kit OEM",
+    "price": 320000,
+    "discount": 0,
+    "stock": 22,
+    "rating": 4.5,
+    "reviews": 40,
+    "description": "Kit clutch plate dengan material fiber tinggi. Transfer tenaga halus dan tahan lama.",
+    "specifications": {
+      "material": "Fiber Composite",
+      "plates": "6 plates",
+      "type": "Wet Clutch"
+    },
+    "category": "Transmission",
+    "brand": "OEM",
+    "image": "clutch.jpg"
+  },
+  {
+    "id": "p14",
+    "name": "Exhaust Full System Racing",
+    "price": 2800000,
+    "discount": 7,
+    "stock": 10,
+    "rating": 4.8,
+    "reviews": 35,
+    "description": "Exhaust full system racing dengan material titanium. Meningkatkan performa dan suara sporty.",
+    "specifications": {
+      "material": "Titanium",
+      "type": "Full System",
+      "weight": "2.8kg"
+    },
+    "category": "Racing",
+    "brand": "Akrapovic",
+    "image": "exhaust.jpg"
+  },
+  {
+    "id": "p15",
+    "name": "Radiator Coolant Engine Ice",
+    "price": 180000,
+    "discount": 10,
+    "stock": 40,
+    "rating": 4.6,
+    "reviews": 78,
+    "description": "Coolant radiator Engine Ice dengan formula propylene glycol. Menurunkan suhu mesin hingga 15°C.",
+    "specifications": {
+      "volume": "1.9L",
+      "type": "Propylene Glycol",
+      "color": "Blue"
+    },
+    "category": "Engine",
+    "brand": "Engine Ice",
+    "image": "coolant.jpg"
+  },
+  {
+    "id": "p16",
+    "name": "Brake Pad Sintered HH",
+    "price": 220000,
+    "discount": 5,
+    "stock": 55,
+    "rating": 4.7,
+    "reviews": 92,
+    "description": "Brake pad sintered HH dengan performa pengereman superior di semua kondisi cuaca.",
+    "specifications": {
+      "type": "Sintered",
+      "friction": "HH",
+      "material": "Metal Composite"
+    },
+    "category": "Brake",
+    "brand": "EBC",
+    "image": "brakepad.jpg"
+  },
+  {
+    "id": "p17",
+    "name": "Side Mirror Carbon Look",
+    "price": 280000,
+    "discount": 15,
+    "stock": 30,
+    "rating": 4.3,
+    "reviews": 55,
+    "description": "Side mirror dengan finishing carbon look dan desain aerodinamis. Tampilan modern dan sporty.",
+    "specifications": {
+      "material": "ABS Carbon",
+      "size": "15cm x 10cm",
+      "adjustable": "360°"
+    },
+    "category": "Body Parts",
+    "brand": "Rizoma",
+    "image": "mirror.jpg"
+  },
+  {
+    "id": "p18",
+    "name": "Digital Speedometer Racing",
+    "price": 580000,
+    "discount": 8,
+    "stock": 25,
+    "rating": 4.5,
+    "reviews": 48,
+    "description": "Digital speedometer racing dengan layar TFT dan fitur telemetri lengkap.",
+    "specifications": {
+      "display": "3.5\" TFT",
+      "features": "Speed, RPM, Temp, Gear",
+      "waterproof": "IP67"
+    },
+    "category": "Electronic",
+    "brand": "KOSO",
+    "image": "speedometer.jpg"
+  },
+  {
+    "id": "p19",
+    "name": "CVT Roller Set Racing",
+    "price": 180000,
+    "discount": 0,
+    "stock": 35,
+    "rating": 4.4,
+    "reviews": 60,
+    "description": "Set roller CVT racing dengan variasi berat. Meningkatkan respons akselerasi matic.",
+    "specifications": {
+      "size": "15x12mm",
+      "weights": "10g-14g",
+      "material": "Hardened Steel"
+    },
+    "category": "Transmission",
+    "brand": "Yamaha",
+    "image": "roller.jpg"
+  },
+  {
+    "id": "p20",
+    "name": "Helmet Full Face HJC RPHA",
+    "price": 3200000,
+    "discount": 12,
+    "stock": 8,
+    "rating": 4.9,
+    "reviews": 42,
+    "description": "Helmet full face premium HJC RPHA dengan material fiberglass dan aerodinamika tinggi.",
+    "specifications": {
+      "type": "Full Face",
+      "material": "Fiberglass Composite",
+      "weight": "1.3kg",
+      "certification": "SNI, ECE"
+    },
+    "category": "Accessories",
+    "brand": "HJC",
+    "image": "helmet.jpg"
+  }
+]

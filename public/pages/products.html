@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - FathurProject</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" href="/css/toast.css">
+</head>
+<body>
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo"><i class="fas fa-motorcycle"></i><span>FathurProject</span></div>
+            <div class="loading-spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div id="navbarContainer"></div>
+
+    <main class="products-page">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Koleksi <span class="gradient-text">Spare Part</span></h1>
+                <p>Temukan berbagai macam spare part motor berkualitas</p>
+            </div>
+
+            <!-- Filter & Search -->
+            <div class="products-toolbar">
+                <div class="search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Cari produk, brand, atau kategori..." class="search-input">
+                </div>
+                <div class="filter-wrapper">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">Semua Kategori</option>
+                    </select>
+                    <select id="sortFilter" class="filter-select">
+                        <option value="popular">Terpopuler</option>
+                        <option value="newest">Terbaru</option>
+                        <option value="price-asc">Harga Terendah</option>
+                        <option value="price-desc">Harga Tertinggi</option>
+                        <option value="rating">Rating Tertinggi</option>
+                    </select>
+                    <button class="filter-toggle" onclick="toggleFilterDrawer()">
+                        <i class="fas fa-sliders-h"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Drawer -->
+            <div class="filter-drawer" id="filterDrawer">
+                <div class="filter-drawer-content">
+                    <div class="filter-group">
+                        <h4>Harga</h4>
+                        <div class="price-range">
+                            <input type="range" id="priceMin" min="0" max="5000000" value="0">
+                            <input type="range" id="priceMax" min="0" max="5000000" value="5000000">
+                            <div class="price-labels">
+                                <span>Rp <span id="minPriceLabel">0</span></span>
+                                <span>Rp <span id="maxPriceLabel">5.000.000</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Rating</h4>
+                        <div class="rating-filter">
+                            <label><input type="radio" name="rating" value="0" checked> Semua</label>
+                            <label><input type="radio" name="rating" value="4"> ★★★★+</label>
+                            <label><input type="radio" name="rating" value="3"> ★★★+</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Stok</h4>
+                        <label><input type="checkbox" id="inStockOnly"> Tersedia</label>
+                    </div>
+                    <button class="btn-primary" onclick="applyFilters()" style="width:100%;justify-content:center;">
+                        <i class="fas fa-check"></i> Terapkan Filter
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Rendered by JS -->
+            </div>
+
+            <!-- Loading Skeleton -->
+            <div class="products-skeleton" id="productsSkeleton">
+                <div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton skeleton-text"></div><div class="skeleton skeleton-text"></div></div>
+                <div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton skeleton-text"></div><div class="skeleton skeleton-text"></div></div>
+                <div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton skeleton-text"></div><div class="skeleton skeleton-text"></div></div>
+                <div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton skeleton-text"></div><div class="skeleton skeleton-text"></div></div>
+                <div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton skeleton-text"></div><div class="skeleton skeleton-text"></div></div>
+                <div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton skeleton-text"></div><div class="skeleton skeleton-text"></div></div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <button id="prevPage" onclick="changePage(-1)"><i class="fas fa-chevron-left"></i></button>
+                <span id="pageInfo">Halaman 1</span>
+                <button id="nextPage" onclick="changePage(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <div id="footerContainer"></div>
+    <div id="toastContainer"></div>
+
+    <script src="/js/components.js"></script>
+    <script src="/js/toast.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/products.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

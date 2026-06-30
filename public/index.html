@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FathurProject - Motorcycle Spare Parts Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/toast.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-motorcycle"></i>
+                <span>FathurProject</span>
+            </div>
+            <div class="loading-spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div id="navbarContainer"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">
+                        <i class="fas fa-bolt"></i> New Collection 2026
+                    </span>
+                    <h1 class="hero-title">
+                        Spare Parts<br>
+                        <span class="gradient-text">Premium</span> untuk<br>
+                        Motor <span class="gradient-text">Modern</span>
+                    </h1>
+                    <p class="hero-desc">
+                        Temukan spare part motor berkualitas dengan teknologi terbaik.
+                        Dari performa hingga estetika, semua ada di sini.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="pages/products.html" class="btn-primary">
+                            <i class="fas fa-shopping-bag"></i> Belanja Sekarang
+                        </a>
+                        <a href="#categories" class="btn-secondary">
+                            <i class="fas fa-play"></i> Lihat Kategori
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Produk</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Kategori</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Kepuasan</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card-glass">
+                        <img src="assets/hero-motor.png" alt="Motorcycle" class="hero-img">
+                        <div class="floating-badge badge-1">
+                            <i class="fas fa-star"></i> 4.9 Rating
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <i class="fas fa-truck"></i> Free Shipping
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <i class="fas fa-tag"></i> Diskon 70%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories" id="categories">
+            <div class="section-header">
+                <h2>Kategori <span class="gradient-text">Populer</span></h2>
+                <p>Temukan spare part berdasarkan kebutuhanmu</p>
+            </div>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Rendered by JS -->
+            </div>
+        </section>
+
+        <!-- Flash Sale -->
+        <section class="flash-sale">
+            <div class="section-header">
+                <h2><i class="fas fa-bolt flash-icon"></i> Flash <span class="gradient-text">Sale</span></h2>
+                <div class="flash-timer" id="flashTimer">
+                    <span>Berakhir dalam</span>
+                    <div class="timer-box">
+                        <span id="hours">02</span>
+                        <span class="timer-sep">:</span>
+                        <span id="minutes">45</span>
+                        <span class="timer-sep">:</span>
+                        <span id="seconds">30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="products-grid flash-grid" id="flashProducts">
+                <!-- Rendered by JS -->
+            </div>
+        </section>
+
+        <!-- Popular Products -->
+        <section class="popular-products">
+            <div class="section-header">
+                <h2>Produk <span class="gradient-text">Terpopuler</span></h2>
+                <p>Paling banyak dicari oleh pecinta motor</p>
+            </div>
+            <div class="products-grid" id="popularProducts">
+                <!-- Rendered by JS -->
+            </div>
+            <div class="view-all">
+                <a href="pages/products.html" class="btn-outline">
+                    Lihat Semua Produk <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured -->
+        <section class="featured">
+            <div class="featured-card">
+                <div class="featured-content">
+                    <span class="featured-badge">Featured</span>
+                    <h3>Racing Collection</h3>
+                    <p>Komponen racing berkualitas tinggi untuk performa maksimal</p>
+                    <a href="pages/products.html?category=Racing" class="btn-primary">Explore</a>
+                </div>
+                <div class="featured-image">
+                    <img src="assets/featured-racing.jpg" alt="Racing">
+                </div>
+            </div>
+            <div class="featured-card">
+                <div class="featured-content">
+                    <span class="featured-badge">New</span>
+                    <h3>Smart Electronic</h3>
+                    <p>Teknologi terbaru untuk motor modern</p>
+                    <a href="pages/products.html?category=Electronic" class="btn-primary">Explore</a>
+                </div>
+                <div class="featured-image">
+                    <img src="assets/featured-electronic.jpg" alt="Electronic">
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="section-header">
+                <h2>Apa Kata <span class="gradient-text">Mereka</span></h2>
+                <p>Testimoni dari para pengguna setia</p>
+            </div>
+            <div class="testimonials-grid" id="testimonialsGrid">
+                <!-- Rendered by JS -->
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <div class="newsletter-icon">
+                    <i class="fas fa-envelope-open"></i>
+                </div>
+                <h3>Subscribe Newsletter</h3>
+                <p>Dapatkan info promo dan produk terbaru setiap minggu</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Masukkan email Anda" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footerContainer"></div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

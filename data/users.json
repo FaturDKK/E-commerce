@@ -1,0 +1,22 @@
+[
+  {
+    "id": "admin1",
+    "name": "Administrator",
+    "email": "admin@fathurproject.com",
+    "password": "$2a$10$N9qo8uLOickgx2ZMRZoMy.MrCqZqWX5qQqQqQqQqQqQqQqQqQqQ",
+    "role": "admin",
+    "phone": "0812-3456-7890",
+    "address": "Jl. Sudirman No. 1, Jakarta",
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "user1",
+    "name": "User Biasa",
+    "email": "user@example.com",
+    "password": "$2a$10$N9qo8uLOickgx2ZMRZoMy.MrCqZqWX5qQqQqQqQqQqQqQqQqQq",
+    "role": "user",
+    "phone": "0812-3456-7891",
+    "address": "Jl. Gatot Subroto No. 2, Jakarta",
+    "createdAt": "2026-01-15T00:00:00.000Z"
+  }
+]

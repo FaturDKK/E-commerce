@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - FathurProject</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" href="/css/toast.css">
+</head>
+<body>
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo"><i class="fas fa-motorcycle"></i><span>FathurProject</span></div>
+            <div class="loading-spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div id="navbarContainer"></div>
+
+    <main class="product-detail-page">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="/">Beranda</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="/pages/products.html">Produk</a>
+                <i class="fas fa-chevron-right"></i>
+                <span id="breadcrumbName">Detail Produk</span>
+            </nav>
+
+            <!-- Product Detail -->
+            <div class="product-detail" id="productDetail">
+                <!-- Loading State -->
+                <div class="product-detail-skeleton" id="productSkeleton">
+                    <div class="skeleton skeleton-image-large"></div>
+                    <div class="skeleton-info">
+                        <div class="skeleton skeleton-text" style="height:30px;width:70%"></div>
+                        <div class="skeleton skeleton-text" style="height:20px;width:50%"></div>
+                        <div class="skeleton skeleton-text" style="height:20px;width:40%"></div>
+                        <div class="skeleton skeleton-text" style="height:60px;width:100%"></div>
+                        <div class="skeleton skeleton-text" style="height:40px;width:60%"></div>
+                    </div>
+                </div>
+
+                <!-- Product Content -->
+                <div class="product-detail-content" id="productContent" style="display:none">
+                    <!-- Image Gallery -->
+                    <div class="product-gallery">
+                        <div class="gallery-main">
+                            <img id="mainImage" src="" alt="Product Image">
+                            <button class="gallery-zoom" onclick="zoomImage()">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                        <div class="gallery-thumbs" id="galleryThumbs">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="product-info-detail">
+                        <div class="product-meta">
+                            <span class="product-brand-detail" id="productBrand">Brand</span>
+                            <span class="product-category-detail" id="productCategory">Kategori</span>
+                        </div>
+                        <h1 id="productName">Nama Produk</h1>
+                        <div class="product-rating-detail">
+                            <span class="stars" id="productStars">★★★★★</span>
+                            <span class="review-count" id="productReviews">(0 ulasan)</span>
+                            <span class="stock-status" id="stockStatus">Tersedia</span>
+                        </div>
+                        <div class="product-price-detail">
+                            <span class="current-price" id="currentPrice">Rp 0</span>
+                            <span class="original-price" id="originalPrice">Rp 0</span>
+                            <span class="discount-badge" id="discountBadge">0%</span>
+                        </div>
+                        <div class="product-description" id="productDescription">
+                            Deskripsi produk akan muncul di sini.
+                        </div>
+
+                        <!-- Specifications -->
+                        <div class="product-specs">
+                            <h4>Spesifikasi</h4>
+                            <div id="specsList">
+                                <!-- Rendered by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Quantity & Actions -->
+                        <div class="product-actions-detail">
+                            <div class="quantity-selector">
+                                <button onclick="decreaseQty()"><i class="fas fa-minus"></i></button>
+                                <span id="quantityDisplay">1</span>
+                                <button onclick="increaseQty()"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="btn-primary btn-add-cart" id="addToCartBtn" onclick="addToCartDetail()">
+                                    <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                                </button>
+                                <button class="btn-accent btn-buy-now" onclick="buyNow()">
+                                    <i class="fas fa-bolt"></i> Beli Sekarang
+                                </button>
+                                <button class="btn-wishlist-detail" id="wishlistBtn" onclick="toggleWishlistDetail()">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Share -->
+                        <div class="product-share">
+                            <span>Bagikan:</span>
+                            <button onclick="shareProduct('facebook')"><i class="fab fa-facebook"></i></button>
+                            <button onclick="shareProduct('twitter')"><i class="fab fa-twitter"></i></button>
+                            <button onclick="shareProduct('whatsapp')"><i class="fab fa-whatsapp"></i></button>
+                            <button onclick="shareProduct('copy')"><i class="fas fa-link"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <section class="reviews-section" id="reviewsSection" style="display:none">
+                <h3>Ulasan Produk</h3>
+                <div class="reviews-summary">
+                    <div class="review-stats">
+                        <span class="big-rating" id="avgRating">0.0</span>
+                        <span class="stars big-stars" id="avgStars">★★★★★</span>
+                        <span id="totalReviews">0 ulasan</span>
+                    </div>
+                </div>
+                <div class="reviews-list" id="reviewsList">
+                    <!-- Rendered by JS -->
+                </div>
+            </section>
+
+            <!-- Related Products -->
+            <section class="related-products">
+                <h3>Produk <span class="gradient-text">Terkait</span></h3>
+                <div class="products-grid" id="relatedProducts">
+                    <!-- Rendered by JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Zoom Modal -->
+    <div class="zoom-modal" id="zoomModal" onclick="closeZoom()">
+        <span class="zoom-close">&times;</span>
+        <img id="zoomImage" src="" alt="Zoomed Image">
+    </div>
+
+    <div id="footerContainer"></div>
+    <div id="toastContainer"></div>
+
+    <script src="/js/components.js"></script>
+    <script src="/js/toast.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/product.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>
