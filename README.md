@@ -170,3 +170,101 @@ npm install
 
 # 3. Jalankan server
 npm start
+
+## 📡 API Endpoints
+
+### Products
+| Method | Endpoint | Deskripsi |
+|--------|----------|-----------|
+| GET | `/api/products` | Ambil semua produk |
+| GET | `/api/products/:id` | Ambil produk by ID |
+| POST | `/api/products` | Tambah produk (admin) |
+| PUT | `/api/products/:id` | Update produk (admin) |
+| DELETE | `/api/products/:id` | Hapus produk (admin) |
+
+### Categories
+| Method | Endpoint | Deskripsi |
+|--------|----------|-----------|
+| GET | `/api/categories` | Ambil semua kategori |
+| GET | `/api/categories/:id` | Ambil kategori by ID |
+| POST | `/api/categories` | Tambah kategori (admin) |
+| PUT | `/api/categories/:id` | Update kategori (admin) |
+| DELETE | `/api/categories/:id` | Hapus kategori (admin) |
+
+### Orders
+| Method | Endpoint | Deskripsi |
+|--------|----------|-----------|
+| GET | `/api/orders` | Ambil semua pesanan |
+| GET | `/api/orders/user/:userId` | Ambil pesanan user |
+| POST | `/api/orders` | Buat pesanan baru |
+| PUT | `/api/orders/:id` | Update status pesanan |
+| DELETE | `/api/orders/:id` | Hapus pesanan |
+
+### Auth
+| Method | Endpoint | Deskripsi |
+|--------|----------|-----------|
+| POST | `/api/auth/register` | Registrasi user |
+| POST | `/api/auth/login` | Login user |
+
+### Users
+| Method | Endpoint | Deskripsi |
+|--------|----------|-----------|
+| GET | `/api/users` | Ambil semua user (admin) |
+| GET | `/api/users/:id` | Ambil user by ID |
+| PUT | `/api/users/:id` | Update user |
+| DELETE | `/api/users/:id` | Hapus user (admin) |
+
+---
+
+## 🔑 Default Account
+
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | `admin@fathurproject.com` | `admin123` |
+| User | `user@example.com` | `user123` |
+
+> **Catatan**: Password sudah di-hash dengan bcrypt. Registrasi otomatis akan membuat akun dengan role `user`.
+
+---
+
+## 📸 Screenshots
+
+### Landing Page
+![Landing Page](screenshots/landing.png)
+
+### Product Page
+![Product Page](screenshots/products.png)
+
+### Product Detail
+![Product Detail](screenshots/product-detail.png)
+
+### Cart
+![Cart](screenshots/cart.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin.png)
+
+---
+
+## 🗄️ Migrasi ke MongoDB
+
+Proyek ini dibangun dengan arsitektur yang siap migrasi ke MongoDB. Struktur data sudah sesuai dengan model MongoDB:
+
+```javascript
+// Contoh model MongoDB
+const ProductSchema = new mongoose.Schema({
+    name: String,
+    price: Number,
+    discount: Number,
+    stock: Number,
+    rating: Number,
+    reviews: Number,
+    description: String,
+    specifications: Object,
+    category: String,
+    brand: String,
+    image: String,
+    createdAt: Date
+});
+
+const Product = mongoose.model('Product', ProductSchema);
